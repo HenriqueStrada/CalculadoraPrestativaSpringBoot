@@ -90,12 +90,157 @@ function calcularHipo() {
     var valor2 = prompt("Digite o segundo segundo: ");
 
     // Enviar uma solicitação HTTP para o servidor com os valores
-    fetch('/Hipo?valor1=' + valor1 + '&valor2=' + valor2)
+    fetch('/hipo?valor1=' + valor1 + '&valor2=' + valor2)
         .then(response => response.text())
         .then(resultado => {
             // Receber a resposta do servidor e exibir um alerta com o resultado
             window.alert("A hipotenusa é: " + resultado);
         });
+}
+function metPes() {
+    // Obter os valores usando prompts
+    var valor1 = prompt("Digite quantos metros deseja converter:");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/metPes?valor1=' + valor1)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado convertido para pés: " + resultado);
+        });
+}
+function pesMet() {
+    // Obter os valores usando prompts
+    var valor1 = prompt("Digite quantos pés deseja converter:");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/pesMet?valor1=' + valor1)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado convertido para metros: " + resultado);
+        });
+}
+function quiMil() {
+    // Obter os valores usando prompts
+    var valor1 = prompt("Digite quantas quilômetros deseja converter:");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/pesMet?valor1=' + valor1)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado convertido para milhas: " + resultado);
+        });
+}
+function milQui() {
+    // Obter os valores usando prompts
+    var valor1 = prompt("Digite quantas milhas deseja converter:");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/pesMet?valor1=' + valor1)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado convertido para quilômetros: " + resultado);
+        });
+}
+function polCen() {
+    // Obter os valores usando prompts
+    var valor1 = prompt("Digite quantas polegadas deseja converter:");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/polCen?valor1=' + valor1)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado convertido para centímetros: " + resultado);
+        });
+}
+function cenPol() {
+    // Obter os valores usando prompts
+    var valor1 = prompt("Digite quantos centímetros deseja converter:");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/cenPol?valor1=' + valor1)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado convertido para polegadas: " + resultado);
+        });
+}
+function seno() {
+    // Obter os valores usando promptss
+    var valor1 = prompt("Digite o cateto oposto: ");
+    var valor2 = prompt("Digite a hipotenusa: ");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/seno?valor1=' + valor1 + '&valor2=' + valor2)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado do seno é: " + resultado);
+        });
+}
+function cos() {
+    // Obter os valores usando promptss
+    var valor1 = prompt("Digite o cateto adjacente: ");
+    var valor2 = prompt("Digite a hipotenusa: ");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/cos?valor1=' + valor1 + '&valor2=' + valor2)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado do cosseno é: " + resultado);
+        });
+}
+function tan() {
+    // Obter os valores usando promptss
+    var valor1 = prompt("Digite o cateto oposto: ");
+    var valor2 = prompt("Digite o cateto adjacente: ");
+
+    // Enviar uma solicitação HTTP para o servidor com os valores
+    fetch('/tan?valor1=' + valor1 + '&valor2=' + valor2)
+        .then(response => response.text())
+        .then(resultado => {
+            // Receber a resposta do servidor e exibir um alerta com o resultado
+            window.alert("O resultado da tangente é: " + resultado);
+        });
+}
+
+document.getElementById("medida").onclick = function() {
+    var botoesMenores = document.getElementById("menores");
+    if (botoesMenores.style.display === "none") {
+        botoesMenores.style.display = "block";
+    } else {
+        botoesMenores.style.display = "none";
+    }
+}
+
+
+var botoesMenores = document.getElementsByClassName("botao-menor");
+for (var i = 0; i < botoesMenores.length; i++) {
+    botoesMenores[i].onclick = function() {
+        document.getElementById("menor").style.display = "none";
+    }
+}
+
+document.getElementById("ang").onclick = function() {
+    var botoesMenores = document.getElementById("menor");
+    if (botoesMenores.style.display === "none") {
+        botoesMenores.style.display = "block";
+    } else {
+        botoesMenores.style.display = "none";
+    }
+}
+
+
+var botoesMenores = document.getElementsByClassName("botao-menor");
+for (var i = 0; i < botoesMenores.length; i++) {
+    botoesMenores[i].onclick = function() {
+        document.getElementById("menores").style.display = "none";
+    }
 }
 
 
@@ -119,4 +264,31 @@ document.getElementById("circu").onclick = function() {
 }
 document.getElementById("hipo").onclick = function() {
     calcularHipo();
+}
+document.getElementById("metPes").onclick = function() {
+    metPes();
+}
+document.getElementById("pesMet").onclick = function() {
+    pesMet();
+}
+document.getElementById("quiMil").onclick = function() {
+    quiMil();
+}
+document.getElementById("milQui").onclick = function() {
+    milQui();
+}
+document.getElementById("polCen").onclick = function() {
+    polCen();
+}
+document.getElementById("cenPol").onclick = function() {
+    cenPol();
+}
+document.getElementById("seno").onclick = function() {
+    seno();
+}
+document.getElementById("cos").onclick = function() {
+    cos();
+}
+document.getElementById("tan").onclick = function() {
+    tan();
 }

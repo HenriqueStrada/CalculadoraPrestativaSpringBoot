@@ -64,20 +64,66 @@ public class CalculadoraController {
     }
     @GetMapping("/hipo")
     public double hipo(@RequestParam double valor1, @RequestParam double valor2) {
-        double resultado;
-        double raioDim = valor1 * 2;
-        resultado = raioDim * Math.PI;
+        double resultado = (valor1 * valor1) + (valor2 * valor2);
+        resultado = Math.sqrt(resultado);
         System.out.println("Resultado: " + resultado);
         return resultado;
-
-        /*
-        String valorCateto = JOptionPane.showInputDialog("Digite o valor do primeiro cateto de seu triangulo");
-        double catetoUm = Double.parseDouble(valorCateto);
-        String valorCatetoDois = JOptionPane.showInputDialog("Digite o valor do segundo cateto de seu triangulo");
-        double catetoDois = Double.parseDouble(valorCatetoDois);
-        double somCatQuard = (catetoUm * catetoUm) + (catetoDois * catetoDois);
-        JOptionPane.showMessageDialog(null, "A hipotenusa do seu triangulo é: " + Math.sqrt(somCatQuard));
-    */
     }
-
+    @GetMapping("/metPes")
+    public double metPes(@RequestParam double valor1) {
+        double resultado = (valor1 * 3.28084);
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+    @GetMapping("/pesMet")
+    public double pesMet(@RequestParam double valor1) {
+        double resultado = (valor1 * 0.3048);
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+    @GetMapping("/quiMil")
+    public double quiMil(@RequestParam double valor1) {
+        double resultado = (valor1 * 0.621371);
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+    @GetMapping("/milQui")
+    public double milQui(@RequestParam double valor1) {
+        double resultado = (valor1 * 1.60934);
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+    @GetMapping("/polCen")
+    public double polCen(@RequestParam double valor1) {
+        double resultado = (valor1 * 2.54);
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+    @GetMapping("/cenPol")
+    public double cenPol(@RequestParam double valor1) {
+        double resultado = (valor1 * 0.393701);
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+    @GetMapping("/seno")
+    public double seno(@RequestParam double valor1, @RequestParam double valor2) {
+        double resultado = valor1 / valor2;
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+        //catopost / catohipo
+    }
+    @GetMapping("/cos")
+    public double cos(@RequestParam double valor1, @RequestParam double valor2) {
+        double resultado = valor1 / valor2;
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+        //catoAdj / catohipot
+    }
+    @GetMapping("/tan")
+    public double tan(@RequestParam double valor1, @RequestParam double valor2) {
+        double resultado = valor1 / valor2;
+        System.out.println("Resultado: " + resultado);
+        return resultado;
+        //catoOposto / catoAdjas
+    }
 }
