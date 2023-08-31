@@ -5,7 +5,7 @@ pegaValores = function(){
 }
        
 function calcularSoma() {
-    // Obter os valores usando prompts
+    // Obter os valores usando promptss
     var valor1 = prompt("Digite o primeiro valor: ");
     var valor2 = prompt("Digite o segundo valor: ");
 
