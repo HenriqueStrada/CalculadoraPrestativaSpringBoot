@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 50vh;
+    box-sizing: border-box;
+    background-color: #3F5D63;
+    color: white;
+}
+.titulo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
+    height: 30px;
+}
+.subTitulo{
+  font-family: 'Krona One', sans-serif;
+  font-size: 30px;
+  height: 30px;
+  color: aqua;
+}
+.selecione{
+    color: aqua;
+    font-family: 'Krona One', sans-serif;
+    font-size: 22px;
+    height: 50px;
+}
+
+.apresentacao{
+    margin: 10% 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conteudo{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.imagem{
+    width: 500px;
+}
+.github{
+    height: 100px;
+}
+.github_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    width: 200px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 24px;
+    padding: 21px 0; 
+    text-decoration: none;
+    color: black;
+}
+.flexButton{
+  display: flex;
+  flex-wrap: wrap;
+}
+.myButton {
+    font-family: 'Krona One', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    height: 50px;
+    width: 5  0px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color: aqua;
+    color: black;
+  }
+  
+  .myButton:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
