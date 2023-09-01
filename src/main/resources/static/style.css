@@ -47,20 +47,28 @@ body{
     width: 500px;
 }
 .github{
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
 }
-.github_link{
+.github_sub{
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.github_link {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    width: 200px;
-    text-align: center;
-    border-radius: 16px;
-    font-size: 24px;
-    padding: 21px 0; 
+    gap: 12px;
+    font-family: 'Krona One', sans-serif;
+    border: 2px solid aqua;
+    width: 380px;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 21px 0;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .github_link:hover {
   animation: pulse 1s infinite;
@@ -75,7 +83,7 @@ body{
     font-size: 16px;
     margin: 10px;
     height: 50px;
-    width: 5 0px;
+
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 16px;
@@ -103,10 +111,11 @@ body{
     font-size: 12px;
     margin: 10px;
     height: 50px;
-    width: 5 0px;
+    width: 50px;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 16px;
     background-color: chocolate;
     color: black;
 }
+
