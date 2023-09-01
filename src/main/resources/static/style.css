@@ -1,15 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
 body{
-    height: 50vh;
     box-sizing: border-box;
     background-color: #3F5D63;
     color: white;
+}
+.cabecalho{
+    padding: 3% 0 0 12%;
+}
+.cabecalho_link:hover {
+    background: #272727;
+    animation: pulse 1s infinite;
+}
+.cabecalho_menu{
+    display: flex;
+    justify-items: center;
+    gap: 80px;
+}
+.cabecalho_link{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    gap: 12px;
+    border: 2px solid aqua;
+    width: 150px;
+    border-radius: 10px;
+    padding: 21px;
+    text-decoration: none;
+    text-align: center;
 }
 .titulo{
     font-family: 'Krona One', sans-serif;
@@ -30,7 +54,7 @@ body{
 }
 
 .apresentacao{
-    margin: 10% 12%;
+    margin: 8% 12%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,27 +74,27 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: 'Krona One', sans-serif;
     gap: 20px;
 }
 .github_sub{
-    font-family: 'Krona One', sans-serif;
     font-weight: 400;
     font-size: 24px;
 }
-.github_link {
+.github_link{
     display: flex;
     justify-content: center;
     gap: 12px;
-    font-family: 'Krona One', sans-serif;
     border: 2px solid aqua;
     width: 380px;
     border-radius: 10px;
     font-size: 22px;
-    padding: 21px 0;
+    padding: 21px;
     text-decoration: none;
     color: white;
 }
 .github_link:hover {
+  background: #272727;
   animation: pulse 1s infinite;
 }
 
@@ -82,8 +106,6 @@ body{
     font-family: 'Krona One', sans-serif;
     font-size: 16px;
     margin: 10px;
-    height: 50px;
-
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 16px;
@@ -110,12 +132,17 @@ body{
     font-family: 'Krona One', sans-serif;
     font-size: 12px;
     margin: 10px;
-    height: 50px;
-    width: 50px;
     padding: 10px 20px;
-    cursor: pointer;
     border-radius: 16px;
     background-color: chocolate;
     color: black;
 }
-
+.rodaPe{
+    padding: 18px;
+    background: aqua;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}

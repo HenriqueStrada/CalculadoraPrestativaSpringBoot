@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header></header>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+          <a class="cabecalho_link">Home</a>
+          <a class="cabecalho_link">Sobre mim</a>
+        </nav>
+    </header>
     <main class="apresentacao">
         
         <section class="conteudo">
@@ -35,20 +40,22 @@
             <button id="ang" class="myButton">Angulo Seno, Cosseno, Tangente</button>
             <br>
             <div id="menor" style="display: none;">
-                <button id="seno" class="botao-menor myButton">Angulo Seno</button>
-                <button id="cos" class="botao-menor myButton">Angulo Cosseno</button>
-                <button id="tan" class="botao-menor myButton">Angulo Tangente</button>
+                <button id="seno" class="botao-menor">Angulo Seno</button>
+                <button id="cos" class="botao-menor">Angulo Cosseno</button>
+                <button id="tan" class="botao-menor">Angulo Tangente</button>
             </div>
             <script src="dalejs.js"></script>
         </div>
         <div class="github">
                 <h2 class="github_sub">Acesse este repositório:</h2>
                 <a class="github_link" href="https://github.com/HenriqueStrada/CalculadoraPrestativaSpringBoot">
-                    <img src="../github.png" height="32" width="33"/>GitHub</a>
+                    <img src="/image/github.png" height="32" width="33" alt="gitHub Icon"/>GitHub</a>
         </div>
     </section>
-        <img class="imagem" src="../EuSabo.jpg" height="360" width="480"/>
+        <img class="imagem" src="image/EuSabo.jpg" height="360" width="480" alt="eu sabo image"/>
     </main>
-    <footer></footer>
+    <footer class="rodaPe">
+        <p>Desenvolvido por Henrique Strada</p>
+    </footer>
 </body>
 </html>
