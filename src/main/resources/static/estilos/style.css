@@ -41,10 +41,10 @@ body{
     height: 30px;
 }
 .subTitulo{
-  font-family: 'Krona One', sans-serif;
-  font-size: 30px;
-  height: 30px;
-  color: aqua;
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
+    height: 30px;
+    color: aqua;
 }
 .selecione{
     color: aqua;
@@ -68,6 +68,7 @@ body{
 }
 
 .imagem{
+
     width: 500px;
 }
 .github{
@@ -94,13 +95,13 @@ body{
     color: white;
 }
 .github_link:hover {
-  background: #272727;
-  animation: pulse 1s infinite;
+    background: #272727;
+    animation: pulse 1s infinite;
 }
 
 .flexButton{
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 .myButton {
     font-family: 'Krona One', sans-serif;
@@ -111,23 +112,23 @@ body{
     border-radius: 16px;
     background-color: aqua;
     color: black;
-  }
-  
-  .myButton:hover {
+}
+
+.myButton:hover {
     animation: pulse 1s infinite;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
 .botao-menor {
     font-family: 'Krona One', sans-serif;
     font-size: 12px;
@@ -146,4 +147,3 @@ body{
     font-size: 18px;
     font-weight: 400;
 }
-

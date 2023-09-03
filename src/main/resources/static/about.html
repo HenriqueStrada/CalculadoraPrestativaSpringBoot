@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mim</title>
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="./estilos/aboutStyle.css">
 </head>
 <body>
-    <h1>sobre mim</h1>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_link" href="index.html">Home</a>
+            <a class="cabecalho_link" href="about.html">Login</a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="conteudo">
+            <h1 class="titulo">Area de login</h1>
+            <div class="areaLogin">
+                <h2>login</h2>
+                <br><br>
+                <input class="nomeSenha" type="text" placeholder="Nome">
+                <br><br>
+                <input class="nomeSenha" type="password" placeholder="Senha">
+                <br><br>
+                <button class="enviar">Enviar</button>
+            </div>
+            <div class="github" style="position: relative; top: 25%">
+                <h2 class="github_sub">Acesse este repositório:</h2>
+                <a class="github_link" href="https://github.com/HenriqueStrada/CalculadoraPrestativaSpringBoot">
+                    <img src="/image/github.png" height="32" width="33" alt="gitHub Icon"/>GitHub</a>
+            </div>
+        </section>
+        <img class="imagem" src="image/htmlEditor.png" height="480" width="480" alt="eu sabo image"/>
+    </main>
+    <footer class="rodaPe">
+        <p>Desenvolvido por Henrique Strada</p>
+    </footer>
 </body>
 </html>
