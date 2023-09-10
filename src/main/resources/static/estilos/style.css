@@ -38,19 +38,19 @@ body{
 .titulo{
     font-family: 'Krona One', sans-serif;
     font-size: 1.875rem;
-    height: 30px;
+    width: 50%;
 }
 .subTitulo{
     font-family: 'Krona One', sans-serif;
     font-size: 1.875rem;
-    height: 30px;
+    width: 50%;
     color: aqua;
 }
 .selecione{
     color: aqua;
     font-family: 'Krona One', sans-serif;
     font-size: 1.375rem;
-    height: 50px;
+    width: 50%;
 }
 
 .apresentacao{
@@ -61,15 +61,15 @@ body{
 }
 
 .conteudo{
-    width: 800px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .imagem{
-
-    width: 500px;
+    height: 50%;
+    width: 50%;
 }
 .github{
     display: flex;
@@ -81,13 +81,14 @@ body{
 .github_sub{
     font-weight: 400;
     font-size: 1.5rem;
+    width: 50%;
 }
 .github_link{
+    width: 50%;
     display: flex;
     justify-content: center;
     gap: 12px;
     border: 2px solid aqua;
-    width: 380px;
     border-radius: 10px;
     font-size: 1.375rem;
     padding: 21px;
