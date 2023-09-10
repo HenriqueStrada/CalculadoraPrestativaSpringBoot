@@ -25,7 +25,7 @@ body{
 .cabecalho_link {
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     gap: 12px;
     border: 2px solid aqua;
@@ -37,19 +37,19 @@ body{
 }
 .titulo{
     font-family: 'Krona One', sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     height: 30px;
 }
 .subTitulo{
     font-family: 'Krona One', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     height: 30px;
     color: aqua;
 }
 .selecione{
     color: aqua;
     font-family: 'Krona One', sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     height: 50px;
 }
 
@@ -80,7 +80,7 @@ body{
 }
 .github_sub{
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .github_link{
     display: flex;
@@ -89,7 +89,7 @@ body{
     border: 2px solid aqua;
     width: 380px;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 1.375rem;
     padding: 21px;
     text-decoration: none;
     color: white;
@@ -105,7 +105,7 @@ body{
 }
 .myButton {
     font-family: 'Krona One', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 10px;
     padding: 10px 20px;
     cursor: pointer;
@@ -131,7 +131,7 @@ body{
 }
 .botao-menor {
     font-family: 'Krona One', sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin: 10px;
     padding: 10px 20px;
     border-radius: 16px;
@@ -144,12 +144,12 @@ body{
     text-align: center;
     color: black;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 .areaLogin {
     font-family: Arial;
-    font-size: 22px;
+    font-size: 1.375rem;
     align-content: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -158,7 +158,7 @@ body{
 .nomeSenha {
     padding: 15px;
     outline: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .enviar {
     background-color: dodgerblue;
@@ -167,7 +167,7 @@ body{
     padding: 15px;
     border-radius: 15px;
     color: white;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 .enviar:hover{
     background-color: deepskyblue;
