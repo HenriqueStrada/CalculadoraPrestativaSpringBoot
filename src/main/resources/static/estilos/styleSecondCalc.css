@@ -32,6 +32,8 @@ div#calculadora{
     text-decoration: none;
     text-align: left;
 }
+
+
 .cabecalho_link:hover {
     background: #272727;
     animation: pulse 1s infinite;
