@@ -21,6 +21,11 @@ div#calculadora{
     justify-items: left;
     gap: 80px;
 }
+.cabecalho_menu button:hover {
+    background: #272727;
+    animation: pulse 1s infinite;
+}
+
 .cabecalho_link{
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -38,7 +43,6 @@ div#calculadora{
     background: #272727;
     animation: pulse 1s infinite;
 }
-
 #screen{
     font-family: inherit;
     font-size: 60px;
@@ -59,7 +63,7 @@ div#calculadora{
     grid-template-rows: 100px 100px 100px 100px 100px;
 }
 
-button{
+.botoes{
     outline: none;
     border-radius: 12px;
     cursor: pointer;
@@ -71,7 +75,7 @@ button{
     box-shadow: 5px 3px 5px black;
 }
 
-button:hover{
+.botoes:hover{
     box-shadow: inset 5px 3px 15px black;
     background-color: #363636;
 }
