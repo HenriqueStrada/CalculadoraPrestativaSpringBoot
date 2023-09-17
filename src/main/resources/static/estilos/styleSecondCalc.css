@@ -17,10 +17,7 @@ div#calculadora{
     width: 15%;
     padding: 3% 0 0 12%;
 }
-.cabecalho_link:hover {
-    background: #272727;
-    animation: pulse 1s infinite;
-}
+
 .cabecalho_menu{
     justify-items: left;
     gap: 80px;
@@ -28,7 +25,7 @@ div#calculadora{
 a{
     text-decoration: none;
 }
-.cabecalho_link {
+.cabecalho_link{
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
