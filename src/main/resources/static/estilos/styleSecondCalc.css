@@ -14,31 +14,33 @@ div#calculadora{
 }
 
 .cabecalho{
-    padding: 3% 0 0 11%;
+    width: 15%;
+    padding: 3% 0 0 12%;
 }
-
+.cabecalho_link:hover {
+    background: #272727;
+    animation: pulse 1s infinite;
+}
 .cabecalho_menu{
     justify-items: left;
     gap: 80px;
 }
-.cabecalho_menu button:hover {
-    background: #272727;
-    animation: pulse 1s infinite;
+a{
+    text-decoration: none;
 }
-
-.cabecalho_link{
+.cabecalho_link {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
+    gap: 12px;
     border: 2px solid aqua;
+    width: 50%;
     border-radius: 10px;
     padding: 21px;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
 }
-
-
 .cabecalho_link:hover {
     background: #272727;
     animation: pulse 1s infinite;
