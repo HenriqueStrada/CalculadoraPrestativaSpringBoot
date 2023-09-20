@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos/styleSecondCalc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_link" href="index.html">Home</a>
+           <a class="cabecalho_link" href="about.html">Login</a>
+        </nav>
+    </header>
+    <div id="calculadora">
+
+        <div id="display">
+            <input type="text" id="screen" disabled="true">
+        </div>
+
+        <div id="botoesCalculadora">
+            <button class="botoes" id="um" onclick="addToScreen('1')">1</button>
+            <button class="botoes" id="dois" onclick="addToScreen('2')">2</button>
+            <button class="botoes" id="tres" onclick="addToScreen('3')">3</button>
+            <button class="botoes" id="multiplicar" onclick="addToScreen('*')">*</button>
+            <button class="botoes" id="limpar">C</button>
+            <button class="botoes" id="quatro" onclick="addToScreen('4')">4</button>
+            <button class="botoes" id="cinco" onclick="addToScreen('5')">5</button>
+            <button class="botoes" id="seis" onclick="addToScreen('6')">6</button>
+            <button class="botoes" id="dividir" onclick="addToScreen('/')">/</button>
+            <button class="botoes" id="deletar">←</button>
+            <button class="botoes" id="sete" onclick="addToScreen('7')">7</button>
+            <button class="botoes" id="oito" onclick="addToScreen('8')">8</button>
+            <button class="botoes" id="nove" onclick="addToScreen('9')">9</button>
+            <button class="botoes" id="somar" onclick="addToScreen('+')">+</button>
+            <button class="botoes" id="resultado" onclick="resultado()">=</button>
+            <button class="botoes" id="zero" onclick="addToScreen('0')">0</button>
+            <button class="botoes" id="dot" onclick="addToScreen('.')">.</button>
+            <button class="botoes" id="dbZero" onclick="addToScreen('00')">00</button>
+            <button class="botoes" id="subtracao" onclick="addToScreen('-')">-</button>
+
+
+        </div>
+        <a id="github" href="https://github.com/HenriqueStrada/CalcJavaScriptLinda">
+            <img src="image/GitBadge.png" alt="GitHub"/>
+        </a>
+    </div>
+
+    <script src="calcSecond.js"></script>
+</body>
+</html>

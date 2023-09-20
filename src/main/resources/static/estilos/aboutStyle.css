@@ -11,6 +11,7 @@ body{
     color: white;
 }
 .cabecalho{
+    width: 50%;
     padding: 3% 0 0 12%;
 }
 .cabecalho_link:hover {
@@ -18,6 +19,7 @@ body{
     animation: pulse 1s infinite;
 }
 .cabecalho_menu{
+    width: 50%;
     display: flex;
     justify-items: center;
     gap: 80px;
@@ -25,11 +27,11 @@ body{
 .cabecalho_link {
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     gap: 12px;
     border: 2px solid aqua;
-    width: 150px;
+    width: 50%;
     border-radius: 10px;
     padding: 21px;
     text-decoration: none;
@@ -37,20 +39,20 @@ body{
 }
 .titulo{
     font-family: 'Krona One', sans-serif;
-    font-size: 30px;
-    height: 30px;
+    font-size: 1.875rem;
+    width: 50%;
 }
 .subTitulo{
     font-family: 'Krona One', sans-serif;
-    font-size: 18px;
-    height: 30px;
+    font-size: 1.125rem;
+    width: 50%;
     color: aqua;
 }
 .selecione{
     color: aqua;
     font-family: 'Krona One', sans-serif;
-    font-size: 22px;
-    height: 50px;
+    font-size: 1.375rem;
+    width: 50%;
 }
 
 .apresentacao{
@@ -61,15 +63,15 @@ body{
 }
 
 .conteudo{
-    width: 800px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .imagem{
-
-    width: 500px;
+    height: 50%;
+    width: 50%;
 }
 .github{
     display: flex;
@@ -79,17 +81,19 @@ body{
     gap: 20px;
 }
 .github_sub{
+    width: 50%;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .github_link{
+
     display: flex;
     justify-content: center;
     gap: 12px;
     border: 2px solid aqua;
-    width: 380px;
+    width: 50%;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 1.375rem;
     padding: 21px;
     text-decoration: none;
     color: white;
@@ -105,7 +109,7 @@ body{
 }
 .myButton {
     font-family: 'Krona One', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 10px;
     padding: 10px 20px;
     cursor: pointer;
@@ -131,7 +135,7 @@ body{
 }
 .botao-menor {
     font-family: 'Krona One', sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin: 10px;
     padding: 10px 20px;
     border-radius: 16px;
@@ -144,30 +148,32 @@ body{
     text-align: center;
     color: black;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 .areaLogin {
-    font-family: Arial;
-    font-size: 22px;
+    width: 50%;
+    font-family: 'Arial', 'sans-serif';
+    font-size: 1.375rem;
     align-content: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 50px;
 }
 .nomeSenha {
+    width: 50%;
     padding: 15px;
     outline: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .enviar {
     background-color: dodgerblue;
     border: none;
-    width: 225px;
+    width: 50%;
     padding: 15px;
     border-radius: 15px;
     color: white;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 .enviar:hover{
     background-color: deepskyblue;

@@ -1,0 +1,123 @@
+body, html{
+    background-color: #3F5D63;
+
+}
+div#calculadora{
+    margin: auto;
+    width: 550px;
+    height: 700px;
+    border: none;
+    background-color: #363636;
+    border-radius: 32px;
+    font-family: 'Orbitron', 'sans-serif';
+    box-shadow: 10px 10px 15px 3px;
+}
+
+.cabecalho{
+    width: 15%;
+    padding: 3% 0 0 12%;
+}
+
+.cabecalho_menu{
+    justify-items: left;
+    gap: 80px;
+}
+a{
+    text-decoration: none;
+}
+.cabecalho_link{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 12px;
+    border: 2px solid aqua;
+    width: 50%;
+    border-radius: 10px;
+    padding: 21px;
+    text-decoration: none;
+    text-align: center;
+}
+.cabecalho_link:hover {
+    background: #272727;
+    animation: pulse 1s infinite;
+}
+#screen{
+    font-family: inherit;
+    font-size: 60px;
+    width: 510px;
+    height: 130px;
+    margin: 40px 20px;
+    border: none;
+    border-radius: 24px;
+    box-shadow: inset 5px 5px 30px;
+    background-color: white;
+}
+
+#botoesCalculadora{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 95px 95px 95px 95px 95px;
+    grid-gap: 8px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+}
+
+.botoes{
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: dimgray;
+    color: whitesmoke;
+    font: inherit;
+    font-size: 25px;
+    box-shadow: 5px 3px 5px black;
+}
+
+.botoes:hover{
+    box-shadow: inset 5px 3px 15px black;
+    background-color: #363636;
+}
+
+#resultado{
+    height: 206px;
+    font-size: 60px;
+    background-color: #2ECC71;
+}
+
+#limpar{
+    font-size: 30px;
+}
+
+#github {
+    position: absolute;
+    bottom: 8px;
+    right: 21px;
+}
+
+div#calculadora{
+    position: relative;
+    /* restante do código */
+}
+
+#github img {
+    border-radius: 15px;
+    width: 140px;
+    height: auto;
+}
+
+#github:hover {
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
