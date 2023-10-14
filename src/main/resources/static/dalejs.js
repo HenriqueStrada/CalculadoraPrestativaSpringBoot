@@ -1,6 +1,5 @@
 window.onload = function() {
 
-
     pegaValores = function () {
         var valorUm = prompt("Digite o primeiro valor: ");
         var valorDois = prompt("Digite o segundo valor: ");

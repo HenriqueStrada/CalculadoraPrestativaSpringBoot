@@ -1,6 +1,6 @@
-package com.calc.prestativa.backEnd;
-import static com.calc.prestativa.backEnd.util.Calcula.Calculadora;
-import static com.calc.prestativa.backEnd.util.Uteis.mostrarImagem;
+package com.calc.prestativa.testeCmdLocal;
+import static com.calc.prestativa.testeCmdLocal.util.Calcula.Calculadora;
+import static com.calc.prestativa.testeCmdLocal.util.Uteis.mostrarImagem;
 
 
 public class Main {

@@ -1,9 +1,9 @@
-package com.calc.prestativa.backEnd.util;
+package com.calc.prestativa.testeCmdLocal.util;
 import javax.swing.*;
 
 
-import static com.calc.prestativa.backEnd.calculos.Calc.*;
-import static com.calc.prestativa.backEnd.util.Uteis.pergunteRefaz;
+import static com.calc.prestativa.testeCmdLocal.calculos.Calc.*;
+import static com.calc.prestativa.testeCmdLocal.util.Uteis.pergunteRefaz;
 
 
 public class Calcula {

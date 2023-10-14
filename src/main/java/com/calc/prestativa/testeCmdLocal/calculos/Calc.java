@@ -1,8 +1,8 @@
-package com.calc.prestativa.backEnd.calculos;
+package com.calc.prestativa.testeCmdLocal.calculos;
 
 import javax.swing.*;
 
-import static com.calc.prestativa.backEnd.util.Uteis.pegaValores;
+import static com.calc.prestativa.testeCmdLocal.util.Uteis.pegaValores;
 
 
 public class Calc {
