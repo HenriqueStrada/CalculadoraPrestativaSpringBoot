@@ -8,7 +8,7 @@ document.querySelector("#deletar").addEventListener("click", function (){
     screen.value = screen.value.substring(0,(screen.value.length -1));
 });
 const operadoresPadrao = ["*", "+", "-", "/", "."];
-
+//
 function addToScreen(value){
 
     screen.value += value;
