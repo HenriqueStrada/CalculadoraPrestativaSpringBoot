@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
-    @Autowired
+    @Autowiredstatasd
     private UserRepository userRepository;
 
     @PostMapping("/processForm")
