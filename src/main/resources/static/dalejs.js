@@ -238,6 +238,18 @@ window.onload = function() {
             botoesMenores.style.display = "none";
         }
     }
+    // function enviar (){
+    //         var nomeUser = document.getElementById('nomeUser').value;
+    //         var senhaUser = document.getElementById('senhaUser').value;
+    //
+    //     // Enviar uma solicitação HTTP para o servidor com os valores
+    //     fetch('/log?nomeUser=' + nomeUser + '&senhaUser=' + senhaUser)
+    //         .then(response => response.text())
+    //         .then(resultado => {
+    //             // Receber a resposta do servidor e exibir um alerta com o resultado
+    //             window.alert("Resultado do login: " + resultado);
+    //         });
+    // }
 
     document.getElementById("soma").onclick = function () {
         calcularSoma();
@@ -287,4 +299,7 @@ window.onload = function() {
     document.getElementById("tan").onclick = function () {
         tan();
     }
+    // document.getElementById("enviar").onclick = function () {
+    //     enviar();
+    // }
 }

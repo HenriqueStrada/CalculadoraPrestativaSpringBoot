@@ -20,12 +20,16 @@
             <div class="areaLogin">
                 <h2>login</h2>
                 <br><br>
-                <form action="/login" method="post">
-                        <input class="nomeUser" type="text" id="username" name="username" placeholder="Nome" required><br><br>
-                        <input class="senhaUser" type="password" id="password" name="password" placeholder="Senha" required><br><br>
-                        <button type="submit">Login</button>
-                    <button type="submit" class="enviar" id="enviar">Enviar</button>
+                <form action="/processForm" method="post" id="userForm">
+                    <input class="nomeUser" type="text" id="username" name="username" placeholder="Nome" required><br><br>
+                    <input class="senhaUser" type="password" id="password" name="password" placeholder="Senha" required><br><br>
+                    <select id="action" name="action">
+                        <option value="register">Registrar</option>
+                        <option value="login">Login</option>
+                    </select><br><br>
+                    <button type="submit">Enviar</button>
                 </form>
+
             </div>
             </section>
             <div class="github" style="position: relative; top: 25%">
