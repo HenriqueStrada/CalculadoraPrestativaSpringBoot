@@ -1,21 +1,31 @@
 package com.calc.prestativa;
+
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NonNull;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "users")
-public class User{
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NonNull
     private Long id;
 
-    @Getter
     @Column(nullable = false, unique = true)
     private String username;
-    
-    @Getter
+
+
     @Column(nullable = false)
     private String password;
+
+    public User() {
+
+    }
+
 
 }
