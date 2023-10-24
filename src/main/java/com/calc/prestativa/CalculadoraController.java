@@ -38,7 +38,7 @@ public class CalculadoraController {
         System.out.println("Resultado: " + resultado);
         return resultado;
     }
-
+//
     @GetMapping("/div")
     public double div(@RequestParam double valor1, @RequestParam double valor2) {
         // Realizar a divisão dos valores
