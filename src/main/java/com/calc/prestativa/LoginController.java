@@ -1,9 +1,10 @@
 package com.calc.prestativa;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 
 @RestController
 public class LoginController {
@@ -23,16 +24,24 @@ public class LoginController {
             newUser.setPassword(password);
             userRepository.save(newUser);
 
-            return "Usuário registrado com sucesso!";
+            return "logCad";
         } else if ("login".equals(action)) {
             User user = userRepository.findByUsername(username);
             if (user != null && user.getPassword().equals(password)) {
-                return "Login bem sucedido!";
+                return "logCad";
             } else {
                 return "Falha no login. Por favor, tente novamente.";
             }
         } else {
             return "Ação inválida.";
         }
+    }
+
+    @GetMapping("/home")
+    public String home(Model model, @RequestParam(value = "username", required = false) String username) {
+        if (username != null) {
+            model.addAttribute("username", username);
+        }
+        return "home"; // Certifique-se de ter uma página "home.html" em src/main/resources/templates
     }
 }

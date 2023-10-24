@@ -1,5 +1,10 @@
 window.onload = function() {
 
+    var username = "Nome do Usuário"; // Substitua isso pelo nome do usuário logado
+
+    // Atualize o conteúdo da tag <span> com o nome do usuário
+    document.getElementById("username").textContent = "Bem-vindo, " + username + "!";
+
     pegaValores = function () {
         var valorUm = prompt("Digite o primeiro valor: ");
         var valorDois = prompt("Digite o segundo valor: ");
