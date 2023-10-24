@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
-    @Autowiredstatasd
+    @Autowired
     private UserRepository userRepository;
 
     @PostMapping("/processForm")
@@ -22,7 +22,7 @@ public class LoginController {
             newUser.setUsername(username);
             newUser.setPassword(password);
             userRepository.save(newUser);
-//
+
             return "Usuário registrado com sucesso!";
         } else if ("login".equals(action)) {
             User user = userRepository.findByUsername(username);
