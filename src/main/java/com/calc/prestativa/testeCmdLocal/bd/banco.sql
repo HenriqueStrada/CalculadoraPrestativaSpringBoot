@@ -1,8 +1,10 @@
 create database users;
-use users;
+use userdb;
 
-create table user(
-                     id bigint primary key auto_increment,
-                     nome varchar(150),
-                     senha int not null
+create table users(
+                      id bigint auto_increment primary key,
+                      username varchar(100) not null,
+                      password varchar (100) not null
 );
+
+select * from users;
