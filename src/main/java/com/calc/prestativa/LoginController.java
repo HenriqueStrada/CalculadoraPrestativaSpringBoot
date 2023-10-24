@@ -1,10 +1,10 @@
 package com.calc.prestativa;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class LoginController {
@@ -13,27 +13,27 @@ public class LoginController {
     private UserRepository userRepository;
 
     @PostMapping("/processForm")
-    public String processForm(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam("action") String action) {
-        User newUser = new com.calc.prestativa.User();
+    public ResponseEntity<String> processForm(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam("action") String action) {
+        User newUser = new User();
 
         if ("register".equals(action)) {
             if (userRepository.findByUsername(username) != null) {
-                return "Usuário já existe. Por favor, escolha outro nome de usuário.";
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário já existe. Por favor, escolha outro nome de usuário.");
             }
             newUser.setUsername(username);
             newUser.setPassword(password);
             userRepository.save(newUser);
 
-            return "logCad";
+            return ResponseEntity.status(HttpStatus.OK).body("Usuário registrado com sucesso!");
         } else if ("login".equals(action)) {
             User user = userRepository.findByUsername(username);
             if (user != null && user.getPassword().equals(password)) {
-                return "logCad";
+                return ResponseEntity.status(HttpStatus.OK).body("Login bem sucedido!");
             } else {
-                return "Falha no login. Por favor, tente novamente.";
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Falha no login. Por favor, tente novamente.");
             }
         } else {
-            return "Ação inválida.";
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Ação inválida.");
         }
     }
 
@@ -42,6 +42,6 @@ public class LoginController {
         if (username != null) {
             model.addAttribute("username", username);
         }
-        return "home"; // Certifique-se de ter uma página "home.html" em src/main/resources/templates
+        return "index";
     }
 }
