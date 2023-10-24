@@ -12,15 +12,11 @@ div#calculadora{
     font-family: 'Orbitron', 'sans-serif';
     box-shadow: 10px 10px 15px 3px;
 }
-
-.cabecalho{
-    width: 15%;
+.cabecalho_menu {
     padding: 3% 0 0 12%;
 }
-
-.cabecalho_menu{
-    justify-items: left;
-    gap: 80px;
+.cabecalho_link {
+    margin-right: 0.8rem;
 }
 a{
     text-decoration: none;

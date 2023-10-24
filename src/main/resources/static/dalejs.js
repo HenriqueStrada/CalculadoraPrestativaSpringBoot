@@ -1,29 +1,4 @@
 window.onload = function() {
-
-    var username = "Nome do Usuário";
-
-    fetch()
-    document.getElementById("username").textContent = "Bem-vindo, " + username + "!";
-
-    document.getElementById("userForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        var formData = new FormData(this);
-
-        fetch("/processForm", {
-            method: "POST",
-            body: formData
-        })
-            .then(response => response.text())
-            .then(data => {
-                // Exibir a mensagem na página
-                document.getElementById("mensagem").textContent = data;
-            })
-            .catch(error => {
-                console.error("Erro ao processar a solicitação:", error);
-            });
-    });
-
     pegaValores = function () {
         var valorUm = prompt("Digite o primeiro valor: ");
         var valorDois = prompt("Digite o segundo valor: ");
