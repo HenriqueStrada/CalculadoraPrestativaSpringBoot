@@ -1,4 +1,4 @@
-create database users;
+create database userdb;
 use userdb;
 
 create table users(
