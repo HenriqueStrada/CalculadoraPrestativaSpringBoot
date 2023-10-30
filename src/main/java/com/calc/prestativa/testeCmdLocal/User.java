@@ -1,4 +1,4 @@
-package com.calc.prestativa;
+package com.calc.prestativa.testeCmdLocal;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -22,10 +22,7 @@ public class User {
 
     @Column(nullable = false)
     private String password;
-
     public User() {
 
     }
-
-
 }

@@ -1,4 +1,4 @@
-package com.calc.prestativa;
+package com.calc.prestativa.testeCmdLocal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
