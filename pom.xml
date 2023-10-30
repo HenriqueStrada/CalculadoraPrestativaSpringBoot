@@ -33,7 +33,6 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependencies>
 			<!-- Outras dependências aqui -->
 
 			<!-- Spring Data JPA -->
@@ -43,12 +42,12 @@
 			</dependency>
 
 			<!-- Hibernate -->
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-core</artifactId>
-				<!-- Use a mesma versão do Hibernate que é compatível com a versão do Spring Data JPA -->
-				<version>5.5.7.Final</version>
-			</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.0.0.Final</version> <!-- Use a versão compatível com sua versão do Java -->
+		</dependency>
+
 
 
 		<dependency>
