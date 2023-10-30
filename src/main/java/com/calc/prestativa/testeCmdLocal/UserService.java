@@ -1,5 +1,5 @@
-package com.calc.prestativa;
-import com.calc.prestativa.User;
+package com.calc.prestativa.testeCmdLocal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.calc.prestativa;
+package com.calc.prestativa.testeCmdLocal;
 
 import jakarta.persistence.*;
 import lombok.Getter;
