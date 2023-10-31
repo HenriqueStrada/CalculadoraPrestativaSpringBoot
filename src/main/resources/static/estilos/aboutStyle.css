@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#userForm {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #3F5D63;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#showPassword {
+    margin-right: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+body{
+    box-sizing: border-box;
+    background-color: #3F5D63;
+    color: white;
+}
+.cabecalho{
+    width: 50%;
+    padding: 3% 0 0 12%;
+}
+.cabecalho_link:hover {
+    background: #272727;
+    animation: pulse 1s infinite;
+}
+.cabecalho_menu{
+    width: 50%;
+    display: flex;
+    justify-items: center;
+    gap: 80px;
+}
+.cabecalho_link {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 12px;
+    border: 2px solid aqua;
+    width: 50%;
+    border-radius: 10px;
+    padding: 21px;
+    text-decoration: none;
+    text-align: center;
+}
+.titulo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.875rem;
+    width: 50%;
+}
+.subTitulo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.125rem;
+    width: 50%;
+    color: aqua;
+}
+.selecione{
+    color: aqua;
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.375rem;
+    width: 50%;
+}
+
+.apresentacao{
+    margin: 8% 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.imagem{
+    height: 50%;
+    width: 50%;
+}
+.github{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Krona One', sans-serif;
+    gap: 20px;
+}
+.github_sub{
+    width: 50%;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.github_link{
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    border: 2px solid aqua;
+    width: 50%;
+    border-radius: 10px;
+    font-size: 1.375rem;
+    padding: 21px;
+    text-decoration: none;
+    color: white;
+}
+.github_link:hover {
+    background: #272727;
+    animation: pulse 1s infinite;
+}
+
+.flexButton{
+    display: flex;
+    flex-wrap: wrap;
+}
+.myButton {
+    font-family: 'Krona One', sans-serif;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color: aqua;
+    color: black;
+}
+
+.myButton:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.botao-menor {
+    font-family: 'Krona One', sans-serif;
+    font-size: 0.75rem;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 16px;
+    background-color: chocolate;
+    color: black;
+}
+.rodaPe{
+    padding: 18px;
+    background: aqua;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.areaLogin {
+    width: 50%;
+    font-family: 'Arial', 'sans-serif';
+    font-size: 1.375rem;
+    align-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+.nomeSenha {
+    width: 50%;
+    padding: 15px;
+    outline: none;
+    font-size: 1rem;
+}
+.enviar {
+    background-color: dodgerblue;
+    border: none;
+    width: 50%;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.9375rem;
+}
+.enviar:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+}
