@@ -245,3 +245,58 @@ body{
     background-color: deepskyblue;
     cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        width: 100%;
+        padding: 3% 3%;
+        text-align: center;
+    }
+
+    .cabecalho_menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cabecalho_link {
+        width: 80%;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        margin: 8% 8%;
+    }
+
+    .conteudo {
+        width: 80%;
+    }
+
+    .imagem {
+        width: 50%;
+    }
+
+    .github {
+        width: 80%;
+    }
+
+    .github_link {
+        width: 80%;
+    }
+
+    .areaLogin {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #userForm {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .nomeUser,
+    .senhaUser,
+    .input-container,
+    select,
+    button {
+        width: 100%;
+    }
+}
