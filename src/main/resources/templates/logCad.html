@@ -18,15 +18,28 @@
             <section class="login">
             <h1 class="titulo">Area de login</h1>
             <div class="areaLogin">
-                <h2>login</h2>
+                <h2>login e Cadastro.</h2>
                 <br><br>
                 <form action="/processForm" method="post" id="userForm">
                     <div th:if="${mensagem}" th:text="${mensagem}" class="mensagem"></div>
                     <br>
-                    <input class="nomeUser" type="text" id="username" name="username" placeholder="Nome" required><br><br>
-                    <input class="senhaUser" type="password" id="password" name="password" placeholder="Senha" required><br><br>
-                    <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
-                    <label for="showPassword">Mostrar senha</label><br>
+                    <div class="nomeUserContainer">
+                        <label>
+                            <img class="icon" src="image/user-regular-white.png" alt="Ícone do usuário"/>
+                            <input class="nomeUser" type="text" id="username" name="username" placeholder="Nome" required/>
+                        </label>
+                    </div>
+                    <div class="nomeUserContainer">
+                        <label>
+                            <img class="icon" src="image/lock-alt-regular-white.png" alt="Ícone do cadeado"/>
+                            <input class="senhaUser" type="password" id="password" name="password" placeholder="Senha" required>
+                        </label>
+                    </div>
+                    <br><br>
+                    <div>
+                        <label for="showPassword">Mostrar senha</label>
+                        <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
+                    </div>
                     <select id="action" name="action">
                         <option value="register">Registrar</option>
                         <option value="login">Login</option>

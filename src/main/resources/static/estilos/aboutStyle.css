@@ -54,7 +54,20 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.nomeUserContainer {
+    position: relative;
+    display: inline-block;
+}
 
+.nomeUser {
+    padding-left: 25px;
+}
+
+.icon {
+    position: absolute;
+    left: 12.0rem; /* Ajuste a posição do ícone conforme necessário */
+    top: 4px;
+}
 button:hover {
     background-color: #0056b3;
 }
