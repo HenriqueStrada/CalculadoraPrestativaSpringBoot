@@ -246,10 +246,32 @@ body{
     cursor: pointer;
 }
 @media screen and (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .texto-e-imagem {
+        gap: 20px;
+        display: flex;
+        flex-direction: column-reverse; /* Inverter a ordem dos elementos na coluna */
+        align-items: center; /* Centralizar os elementos na coluna */
+    }
+
+    .imagem {
+        width: 100%;
+        height: auto;
+        order: -1; /* Muda a ordem da imagem para que apareça acima do texto */
+    }
+
     .cabecalho {
         width: 100%;
         padding: 3% 3%;
         text-align: center;
+    }
+
+    .titulo{
+        font-family: 'Krona One', sans-serif;
+        width: 100%;
     }
 
     .cabecalho_menu {
@@ -268,10 +290,6 @@ body{
 
     .conteudo {
         width: 80%;
-    }
-
-    .imagem {
-        width: 50%;
     }
 
     .github {
