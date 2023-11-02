@@ -265,7 +265,7 @@ body{
 
     .cabecalho {
         width: 100%;
-        padding: 3% 3%;
+        padding: 3% 25% 10%;
         text-align: center;
     }
 
@@ -275,6 +275,7 @@ body{
     }
 
     .cabecalho_menu {
+        align-content: center;
         flex-direction: column;
         gap: 10px;
     }
