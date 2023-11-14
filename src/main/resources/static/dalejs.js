@@ -223,12 +223,16 @@ window.onload = function() {
 
     $("#medida").click(function() {
         var botoesMenores = $("#menores");
+        var img = $("#medida img"); // Obtenha a imagem dentro do botão
         if (botoesMenores.is(":visible")) {
             botoesMenores.animate({height: 'toggle'}, 500);
+            img.attr("src", "image/down-arrow-alt-regular-24.png"); // Altere a imagem para a seta para baixo
         } else {
             botoesMenores.animate({height: 'toggle'}, 500);
+            img.attr("src", "image/up-arrow-alt-regular-24.png"); // Altere a imagem para a seta para cima
         }
     });
+
 
 
     $("#ang").click(function() {
