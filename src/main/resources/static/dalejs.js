@@ -221,22 +221,25 @@ window.onload = function() {
             });
     }
 
-    document.getElementById("medida").onclick = function () {
-        var botoesMenores = document.getElementById("menores");
-        if (botoesMenores.style.display === "none") {
-            botoesMenores.style.display = "block";
+    $("#medida").click(function() {
+        var botoesMenores = $("#menores");
+        if (botoesMenores.is(":visible")) {
+            botoesMenores.animate({height: 'toggle'}, 500);
         } else {
-            botoesMenores.style.display = "none";
+            botoesMenores.animate({height: 'toggle'}, 500);
         }
-    }
-    document.getElementById("ang").onclick = function () {
-        var botoesMenores = document.getElementById("menor");
-        if (botoesMenores.style.display === "none") {
-            botoesMenores.style.display = "block";
+    });
+
+
+    $("#ang").click(function() {
+        var botoesMenores = $("#menor");
+        if (botoesMenores.is(":visible")) {
+            botoesMenores.animate({height: 'toggle'}, 500);
         } else {
-            botoesMenores.style.display = "none";
+            botoesMenores.animate({height: 'toggle'}, 500);
         }
-    }
+    });
+
 
 
 

@@ -16,7 +16,6 @@
         </nav>
     </header>
     <main class="apresentacao">
-
         <section class="conteudo">
             <h1 class="titulo">Bem vindo a calculadora HTML</h1>
         <p class="subTitulo">Escolha a opção desejada</p>
@@ -28,23 +27,32 @@
             <button id="raiz" class="myButton">Raiz</button>
             <button id="circu" class="myButton">Circunferencia circulo</button>
             <button id="hipo" class="myButton">Calcular hipotenusa</button>
-            <button id="medida" class="myButton">Calculadora de Unidades de medidas</button>
+
+            <button id="medida" class="myButton">
+                <a>Calculadora de Unidades de medidas
+                <img src="image/down-arrow-alt-regular-24.png" height="24px" width="24px" style="margin-left: 5px; vertical-align: middle; background-color: #ffffff; border-radius: 5px"></a>
+            </button>
             <br>
             <div id="menores" style=" display: none;">
                 <button id="metPes" class="botao-menor myButton">Metro para pés</button>
                 <button id="pesMet" class="botao-menor myButton">Pés para metros</button>
                 <button id="quiMil" class="botao-menor myButton">Quilômetros para milhas</button>
                 <button id="milQui" class="botao-menor myButton">Milhas para quilômetros</button>
-                <button id="polCen" class="botao-menor myButton">Polegadas para Centímetro <img href="static/image/ "></button>
+                <button id="polCen" class="botao-menor myButton">Polegadas para Centímetro</button>
                 <button id="cenPol" class="botao-menor myButton">Centímetro para polegada</button>
             </div>
-            <button id="ang" class="myButton">Angulo Seno, Cosseno, Tangente</button>
+            <button id="ang" class="myButton">
+                <a>Angulo Seno, Cosseno, Tangente
+                    <img src="image/down-arrow-alt-regular-24.png" height="24px" width="24px" style="margin-left: 5px; vertical-align: middle; background-color: #ffffff; border-radius: 5px">
+                </a>
+            </button>
             <br>
             <div id="menor" style="display: none;">
                 <button id="seno" class="botao-menor">Angulo Seno</button>
                 <button id="cos" class="botao-menor">Angulo Cosseno</button>
                 <button id="tan" class="botao-menor">Angulo Tangente</button>
             </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="dalejs.js"></script>
         </div>
         <div class="github">
