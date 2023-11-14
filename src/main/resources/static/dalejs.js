@@ -220,32 +220,37 @@ window.onload = function() {
                 window.alert("O resultado da tangente é: " + resultado);
             });
     }
+    $(document).ready(function() {
 
     $("#medida").click(function() {
         var botoesMenores = $("#menores");
         var img = $("#medida img"); // Obtenha a imagem dentro do botão
         if (botoesMenores.is(":visible")) {
             botoesMenores.animate({height: 'toggle'}, 500);
+            img.css("transform", "rotate(0deg)"); // Gire a imagem para a posição original
             img.attr("src", "image/down-arrow-alt-regular-24.png"); // Altere a imagem para a seta para baixo
         } else {
             botoesMenores.animate({height: 'toggle'}, 500);
-            img.attr("src", "image/up-arrow-alt-regular-24.png"); // Altere a imagem para a seta para cima
+            img.css("transform", "rotate(180deg)"); // Gire a imagem 180 graus
+            img.attr("src", "image/down-arrow-alt-regular-24.png"); // Altere a imagem para a seta para cima
         }
     });
-
 
 
     $("#ang").click(function() {
         var botoesMenores = $("#menor");
+        var img = $("#ang img"); // Obtenha a imagem dentro do botão
         if (botoesMenores.is(":visible")) {
             botoesMenores.animate({height: 'toggle'}, 500);
+            img.css("transform", "rotate(0deg)"); // Gire a imagem para a posição original
+            img.attr("src", "image/down-arrow-alt-regular-24.png"); // Altere a imagem para a seta para baixo
         } else {
             botoesMenores.animate({height: 'toggle'}, 500);
+            img.css("transform", "rotate(180deg)"); // Gire a imagem 180 graus
+            img.attr("src", "image/down-arrow-alt-regular-24.png"); // Altere a imagem para a seta para cima
         }
     });
-
-
-
+    });
 
     // function enviar (){
     //         var nomeUser = document.getElementById('nomeUser').value;
