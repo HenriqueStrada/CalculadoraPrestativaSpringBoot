@@ -117,10 +117,12 @@ body{
     border-radius: 16px;
     background-color: #537780;
     color: white;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .myButton:hover {
-    animation: pulse 1s infinite;
+    background: #272727;
+    transform: scale(1.1);
 }
 
 @keyframes pulse {
@@ -140,12 +142,12 @@ body{
     margin: 10px;
     padding: 10px 20px;
     border-radius: 16px;
-    background-color: chocolate;
-    color: black;
+    background-color: #007A7A;
+    color: white;
 }
 .rodaPe{
     padding: 18px;
-    background: aqua;
+    background: #00ffff;
     text-align: center;
     color: black;
     font-family: 'Montserrat', sans-serif;
