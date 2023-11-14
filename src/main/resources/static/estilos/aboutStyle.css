@@ -61,11 +61,12 @@ button {
 
 .nomeUser {
     padding-left: 25px;
+    background-color: #cccccc;
 }
 
 .icon {
     position: absolute;
-    left: 12.0rem; /* Ajuste a posição do ícone conforme necessário */
+    left: 12.0rem;
     top: 4px;
 }
 button:hover {
@@ -77,31 +78,40 @@ body{
     color: white;
 }
 .cabecalho{
-    width: 50%;
-    padding: 3% 0 0 12%;
+    width: 100%;
+    background-color: #537780;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 .cabecalho_link:hover {
     background: #272727;
-    animation: pulse 1s infinite;
+    transform: scale(1.1);
+
 }
 .cabecalho_menu{
-    width: 50%;
     display: flex;
-    justify-items: center;
-    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
+
+
 .cabecalho_link {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
-    gap: 12px;
-    border: 2px solid aqua;
-    width: 50%;
     border-radius: 10px;
-    padding: 21px;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid ;
+    max-width: 200px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .titulo{
     font-family: 'Krona One', sans-serif;
@@ -210,10 +220,10 @@ body{
 }
 .rodaPe{
     padding: 18px;
-    background: aqua;
+    background: #537780;
     text-align: center;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'bond', sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
 }
