@@ -80,7 +80,7 @@ body{
     width: 100%;
     background-color: #537780;
     color: white;
-    padding: 20px;
+    padding: 10px 0px 10px 0px;
     text-align: center;
 }
 .cabecalho_link:hover {
@@ -93,7 +93,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
