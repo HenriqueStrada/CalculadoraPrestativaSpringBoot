@@ -1,51 +1,47 @@
-package com.calc.prestativa;
-
-import com.calc.prestativa.AuthenticationDTO;
-import com.calc.prestativa.LoginResponseDTO;
-import com.calc.prestativa.RegisterDTO;
-import com.calc.prestativa.User;
-import com.calc.prestativa.regrasSpringSecurity.TokenService;
-import com.calc.prestativa.userLog.UserRepository;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController
-@RequestMapping("auth")
-public class AuthenticationController {
-    @Autowired
-    private AuthenticationManager authenticationManager;
-    @Autowired
-    private UserRepository repository;
-    @Autowired
-    private TokenService tokenService;
+import javax.servlet.http.HttpSession;
 
-    @PostMapping("/login")
-    public ResponseEntity login(@RequestBody @Valid AuthenticationDTO data){
-        var usernamePassword = new UsernamePasswordAuthenticationToken(data.username(), data.password());
-        var auth = this.authenticationManager.authenticate(usernamePassword);
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
 
-        var token = tokenService.generateToken((User) auth.getPrincipal());
+@Controller
+public class UserController {
 
-        return ResponseEntity.ok(new LoginResponseDTO(token));
+    @GetMapping("/")
+    public String login() {
+        return "login";
     }
 
-    @PostMapping("/register")
-    public ResponseEntity register(@RequestBody @Valid RegisterDTO data){
-        if(this.repository.findByUsername(data.username()) != null) return ResponseEntity.badRequest().build();
+    @PostMapping("/auth/processForm")
+    public ModelAndView processForm(@RequestParam String username, @RequestParam String password, @RequestParam String action, HttpSession session) {
+        ModelAndView mv = new ModelAndView();
 
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.password());
-        User newUser = new User(data.username(), encryptedPassword, data.role());
+        if (action.equals("register")) {
+            // Registration logic goes here
+            // ...
+        } else if (action.equals("login")) {
+            // Login logic goes here
+            // ...
+        }
 
-        this.repository.save(newUser);
+        if (session.getAttribute("loggedUser") != null) {
+            mv.setViewName("home");
+        } else {
+            mv.setViewName("login");
+            mv.addObject("mensagem", "Erro ao realizar a ação");
+        }
 
-        return ResponseEntity.ok().build();
+        return mv;
     }
 }
