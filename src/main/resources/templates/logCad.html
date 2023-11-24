@@ -20,8 +20,8 @@
             <div class="areaLogin">
                 <h2>login e Cadastro.</h2>
                 <br><br>
-                <form action="/processForm" method="post" id="userForm">
-                    <div th:if="${mensagem}" th:text="${mensagem}" class="mensagem"></div>
+                <form action="/auth/processForm" method="post" id="userForm">
+                <div th:if="${mensagem}" th:text="${mensagem}" class="mensagem"></div>
                     <br>
                     <div class="nomeUserContainer">
                         <label>
