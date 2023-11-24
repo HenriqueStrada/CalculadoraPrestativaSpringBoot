@@ -24,9 +24,6 @@ public class AuthenticationController {
     private UserRepository repository;
 
     @Autowired
-    private UserService userService;
-
-    @Autowired
     private TokenService tokenService;
 
     @PostMapping("/login")
@@ -43,6 +40,7 @@ public class AuthenticationController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
     }
+
     @PostMapping("/processForm")
     public ResponseEntity processForm(@RequestBody @Valid AuthenticationDTO data, @RequestParam String action) {
         if ("register".equals(action)) {
@@ -56,7 +54,7 @@ public class AuthenticationController {
 
     private ResponseEntity register(RegisterDTO data) {
         if (this.repository.findByUsername(data.getUsername()) != null) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body("Username already exists");
         }
 
         String encryptedPassword = new BCryptPasswordEncoder().encode(data.getPassword());
@@ -67,3 +65,4 @@ public class AuthenticationController {
         return ResponseEntity.ok().build();
     }
 }
+
