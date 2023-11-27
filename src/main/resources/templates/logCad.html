@@ -47,6 +47,22 @@
                     </select><br><br>
                     <button type="submit">Enviar</button>
                 </form>
+                <form action="/processForm" method="post" id="userForm">
+                    <!-- ... outros campos ... -->
+                    <div class="nomeUserContainer">
+                        <label>
+                            <img class="icon" src="image/user-regular-white.png" alt="Ícone do usuário"/>
+                            <input class="nomeUser" type="text" id="alterar_username" name="alterar_username" placeholder="Novo nome" required>
+                        </label>
+                    </div>
+                    <!-- ... outros campos ... -->
+                    <button type="submit">Enviar</button>
+                </form>
+                <form action="/alterarNome" method="post">
+                    <input type="hidden" name="username" value="${username}">
+                    <button type="submit">Alterar Nome de Usuário</button>
+                </form>
+
 
             </div>
             </section>

@@ -42,6 +42,19 @@ public class LoginController {
         return "logCad";
     }
 
+    @PostMapping("/processAlterar")
+    public String alterarNome(@RequestParam("username") String username, @RequestParam("novoUsername") String novoUsername, Model model) {
+        User user = userRepository.findByUsername(username);
+        if (user != null) {
+            user.setUsername(novoUsername);
+            userRepository.save(user);
+            model.addAttribute("mensagem", "Nome de usuário alterado com sucesso!");
+        } else {
+            model.addAttribute("mensagem", "Usuário não encontrado.");
+        }
+
+        return "logCad";
+    }
 
     @GetMapping("/home")
     public String home(Model model, @RequestParam(value = "username", required = false) String username) {
