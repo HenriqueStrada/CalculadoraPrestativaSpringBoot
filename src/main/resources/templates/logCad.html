@@ -20,7 +20,7 @@
             <div class="areaLogin">
                 <h2>login e Cadastro.</h2>
                 <br><br>
-                <form action="/processForm" method="post" id="userForm">
+                <form action="/processForm" method="post" class="userForm" id="form1">
                     <div th:if="${mensagem}" th:text="${mensagem}" class="mensagem"></div>
                     <br>
                     <div class="nomeUserContainer">
@@ -32,13 +32,13 @@
                     <div class="nomeUserContainer">
                         <label>
                             <img class="icon" src="image/lock-alt-regular-white.png" alt="Ícone do cadeado"/>
-                            <input class="senhaUser" type="password" id="password" name="password" placeholder="Senha" required>
+                            <input type="password" class="password mostrar-senha" name="password" placeholder="Senha" required>
                         </label>
                     </div>
                     <br><br>
                     <div>
-                        <label for="showPassword" style="display: inline-block; margin-right: 0.7rem; pointer-events: none">Mostrar senha</label>
-                        <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()" style="display: inline-block; transform: scale(1.6);">
+                        <label class="showPassword" style="display: inline-block; margin-right: 0.7rem; pointer-events: none">Mostrar senha</label>
+                        <input type="checkbox" class="showPassword" onchange="togglePasswordVisibility()" style="display: inline-block; transform: scale(1.6);">
                     </div>
 
                     <select id="action" name="action">
@@ -47,6 +47,36 @@
                     </select><br><br>
                     <button type="submit">Enviar</button>
                 </form>
+                <form action="/processAlterar" method="post" class="userForm form2">
+                    <div th:if="${mensagem}" th:text="${mensagem}" class="mensagem"></div>
+                    <br>
+                    <div class="nomeUserContainer">
+                        <label>
+                            <img class="icon" src="image/user-regular-white.png" alt="Ícone do usuário"/>
+                            <input type="text" class="username" name="username" placeholder="Nome" required/>
+                        </label>
+                    </div>
+                    <div class="nomeUserContainer">
+                        <label>
+                            <img class="icon" src="image/lock-alt-regular-white.png" alt="Ícone do cadeado"/>
+                            <input type="password" class="password mostrar-senha" name="password" placeholder="Senha" required>
+                        </label>
+                    </div>
+                    <div class="nomeUserContainer userSenha">
+                            <label>
+                                <img class="icon" src="image/user-regular-white.png" alt="Ícone do usuário"/>
+                                <input class="senhaUser" type="text" id="alterar_username" name="alterar_username" placeholder="Novo nome" required>
+                            </label>
+                    </div>
+                    <br><br>
+                    <div>
+                        <label class="showPassword" style="display: inline-block; margin-right: 0.7rem; pointer-events: none">Mostrar senha</label>
+                        <input type="checkbox" class="showPassword" onchange="togglePasswordVisibility()" style="display: inline-block; transform: scale(1.6);">
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                <button class="alterarUser" id="userAlt">Alterar Nome de Usuario.</button>
 
             </div>
             </section>
@@ -61,16 +91,16 @@
         <img class="imagem texto-e-imagem" src="/image/login.png" height="480" width="480" alt="eu sabo image"/>
         <script>
             function togglePasswordVisibility() {
-                var passwordInput = document.getElementById("password");
-                if (passwordInput.type === "password") {
-                    passwordInput.type = "text";
+                var passwordInput = $(".password");
+                if (passwordInput.attr("type") === "password") {
+                    passwordInput.attr("type", "text");
                 } else {
-                    passwordInput.type = "password";
+                    passwordInput.attr("type", "password");
                 }
             }
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="logCad.js"></script>
-        <script src="/dalejs.js"></script>
     </main>
     <footer class="rodaPe">
         <p>Desenvolvido por Henrique Strada e Gustavo Heimburg</p>

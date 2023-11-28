@@ -221,7 +221,6 @@ window.onload = function() {
             });
     }
     $(document).ready(function() {
-
     $("#medida").click(function() {
         var botoesMenores = $("#menores");
         var img = $("#medida img"); // Obtenha a imagem dentro do botão
