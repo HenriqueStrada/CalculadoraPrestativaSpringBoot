@@ -1,3 +1,4 @@
+
 package com.calc.prestativa;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,27 +8,37 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-//
 @Controller
 public class LoginController {
 
     @Autowired
     private UserRepository userRepository;
 
+    @GetMapping("/login/logCad")
+    public String logCad(@RequestParam(value = "acao", required = false, defaultValue = "login") String acao, Model model) {
+        model.addAttribute("acao", acao);
+        return "logCad";
+    }
+
     @PostMapping("/processForm")
-    public String processForm(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam("action") String action, Model model) {
-        User newUser = new User();
+    public String processForm(@RequestParam("username") String username,
+                              @RequestParam("password") String password,
+                              @RequestParam("action") String action,
+                              Model model) {
 
         if ("register".equals(action)) {
+            // Lógica para registro de usuário
             if (userRepository.findByUsername(username) != null) {
                 model.addAttribute("mensagem", "Usuário já existe. Por favor, escolha outro nome de usuário.");
             } else {
+                User newUser = new User();
                 newUser.setUsername(username);
                 newUser.setPassword(password);
                 userRepository.save(newUser);
-                 model.addAttribute("mensagem", "Usuário registrado com sucesso!");
+                model.addAttribute("mensagem", "Usuário registrado com sucesso!");
             }
         } else if ("login".equals(action)) {
+            // Lógica para login
             User user = userRepository.findByUsername(username);
             if (user != null && user.getPassword().equals(password)) {
                 model.addAttribute("username", username);
@@ -42,12 +53,28 @@ public class LoginController {
         return "logCad";
     }
 
+    @PostMapping("/processAlterar")
+    public String alterarNome(@RequestParam("username") String username,
+                              @RequestParam("alterar_username") String novoUsername,
+                              Model model) {
 
-    @GetMapping("/home")
-    public String home(Model model, @RequestParam(value = "username", required = false) String username) {
-        if (username != null) {
-            model.addAttribute("username", username);
+        // Buscar o usuário no banco de dados pelo nome de usuário atual
+        User user = userRepository.findByUsername(username);
+
+        if (user != null) {
+            // Atualizar o nome do usuário
+            user.setUsername(novoUsername);
+
+            // Salvar a entidade atualizada no banco de dados
+            userRepository.save(user);
+
+            // Atualizar o model com as informações necessárias
+            model.addAttribute("username", novoUsername);
+            model.addAttribute("mensagem", "Nome de usuário alterado com sucesso!");
+        } else {
+            model.addAttribute("mensagem", "Usuário não encontrado.");
         }
-        return "index";
+
+        return "logCad";
     }
 }
