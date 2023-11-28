@@ -74,7 +74,6 @@ public class LoginController {
         } else {
             model.addAttribute("mensagem", "Usuário não encontrado.");
         }
-
         return "logCad";
     }
 }
