@@ -55,24 +55,20 @@ public class LoginController {
 
     @PostMapping("/processAlterar")
     public String alterarNome(@RequestParam("username") String username,
+                              @RequestParam("password") String password,
                               @RequestParam("alterar_username") String novoUsername,
                               Model model) {
 
         // Buscar o usuário no banco de dados pelo nome de usuário atual
         User user = userRepository.findByUsername(username);
 
-        if (user != null) {
-            // Atualizar o nome do usuário
+        if (user != null && user.getPassword().equals(password)) {
             user.setUsername(novoUsername);
-
-            // Salvar a entidade atualizada no banco de dados
             userRepository.save(user);
-
-            // Atualizar o model com as informações
             model.addAttribute("username", novoUsername);
             model.addAttribute("mensagem", "Nome de usuário alterado com sucesso!");
         } else {
-            model.addAttribute("mensagem", "Usuário não encontrado.");
+            model.addAttribute("mensagem", "Senha incorreta ou nome de usuario inexistente");
         }
         return "logCad";
     }
