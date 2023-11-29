@@ -22,7 +22,9 @@
 .userSenha{
     margin-top: 15px;
 }
-
+.altNome {
+    margin-top: 10px;
+}
 .input-container {
     margin: 10px 0;
 }
@@ -44,7 +46,20 @@ input[type="password"] {
 #showPassword {
     margin-right: 5px;
 }
-
+.userButton {
+    margin-top: 10px;
+    background-color: #3F5D63;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.userButton:hover {
+    background-color: #30464B;
+}
 select {
     width: 100%;
     padding: 10px;
@@ -79,7 +94,7 @@ select {
     left: 12.0rem;
     top: 4px;
 }
-button:hover {
+.buttons:hover {
     background-color: #0056b3;
 }
 body{

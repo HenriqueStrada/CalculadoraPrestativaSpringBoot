@@ -11,10 +11,10 @@ window.onload = function() {
     });
     $(document).ready(function() {
         $("#userVoltar").click(function() {
-            // Esconde o formulário 1
+            //Mostra o formulário 1
             $('#form1').show();
             $("#userVoltar").hide();
-            // Exibe o formulário 2
+            //Esconde o formulário 2
             $('.form2').hide();
             $("#userAlt").show();
         });
