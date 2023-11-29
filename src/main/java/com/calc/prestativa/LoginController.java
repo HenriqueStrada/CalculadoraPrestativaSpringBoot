@@ -68,7 +68,7 @@ public class LoginController {
             // Salvar a entidade atualizada no banco de dados
             userRepository.save(user);
 
-            // Atualizar o model com as informações necessárias
+            // Atualizar o model com as informações
             model.addAttribute("username", novoUsername);
             model.addAttribute("mensagem", "Nome de usuário alterado com sucesso!");
         } else {
