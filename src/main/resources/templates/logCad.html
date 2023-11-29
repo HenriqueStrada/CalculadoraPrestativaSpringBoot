@@ -45,7 +45,7 @@
                         <option value="register">Registrar</option>
                         <option value="login">Login</option>
                     </select><br><br>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="buttons">Enviar</button>
                 </form>
                 <form action="/processAlterar" method="post" class="userForm form2">
                     <div th:if="${mensagem}" th:text="${mensagem}" class="mensagem"></div>
@@ -74,9 +74,11 @@
                         <input type="checkbox" class="showPassword" onchange="togglePasswordVisibility()" style="display: inline-block; transform: scale(1.6);">
                     </div>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="buttons">Alterar Nome</button>
                 </form>
+
                 <button class="alterarUser" id="userAlt">Alterar Nome de Usuario.</button>
+                <button class="userVoltar" id="userVoltar">Voltar para Registro/Login.</button>
 
             </div>
             </section>
