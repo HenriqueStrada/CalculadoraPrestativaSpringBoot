@@ -26,6 +26,11 @@ public class LoginController {
                               @RequestParam("action") String action,
                               Model model) {
 
+        // Verificar se o nome de usuário ou a senha estão vazios
+        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
+            model.addAttribute("mensagem", "Nome de usuário e senha são obrigatórios, não adianta retirar isso no html!");
+            return "logCad";
+        }
         if ("register".equals(action)) {
             // Lógica para registro de usuário
             if (userRepository.findByUsername(username) != null) {
@@ -72,4 +77,22 @@ public class LoginController {
         }
         return "logCad";
     }
+    @PostMapping("/processDeletar")
+    public String deletarConta(@RequestParam("username") String username,
+                               @RequestParam("password") String password,
+                               @RequestParam("deletar_username") String confirmacao,
+                               Model model) {
+
+        // Buscar o usuário no banco de dados pelo nome de usuário
+        User user = userRepository.findByUsername(username);
+        if (user != null && user.getPassword().equals(password) && confirmacao.equalsIgnoreCase("sim")) {
+            userRepository.delete(user);
+            model.addAttribute("mensagem", "Conta deletada com sucesso!");
+        } else {
+            model.addAttribute("mensagem", "Senha incorreta, nome de usuario inexistente ou confirmação de deleção inválida");
+
+        }
+        return "logCad";
+    }
+
 }
