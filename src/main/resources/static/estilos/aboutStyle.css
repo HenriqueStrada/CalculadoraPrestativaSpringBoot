@@ -4,9 +4,17 @@
     margin: 0;
     padding: 0;
 }
+.botoesOp{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+.selecao{
+    max-width: 150px;
+}
 .userForm {
+    margin-right: 50px;
     max-width: 400px;
-    margin: 0 auto;
     background-color: #3F5D63;
     padding: 30px;
     border-radius: 5px;
@@ -18,11 +26,16 @@
 .form2.exibir-form2 {
     display: block;
 }
-
+.form3 {
+    display: none;
+}
 .userSenha{
     margin-top: 15px;
 }
 .altNome {
+    margin-top: 10px;
+}
+.deletarUser {
     margin-top: 10px;
 }
 .input-container {
@@ -80,6 +93,23 @@ select {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.textAviso {
+    margin-top: 10px;
+}
+.deletNome{
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.deletNome:hover{
+    background-color: darkred;
+}
 .nomeUserContainer {
     position: relative;
     display: inline-block;
@@ -88,7 +118,6 @@ select {
 .nomeUser {
     padding-left: 25px;
 }
-
 .icon {
     position: absolute;
     left: 12.0rem;
