@@ -49,7 +49,7 @@ public class LoginController {
                 model.addAttribute("username", username);
                 model.addAttribute("mensagem", "Login bem sucedido!");
             } else {
-                model.addAttribute("mensagem", "Falha no login. Por favor, tente novamente.");
+                model.addAttribute("mensagem", "Falha no login. Por favor, tente novamente. Senha incorreta ou nome de usuario inexistente");
             }
         } else {
             model.addAttribute("mensagem", "Ação inválida.");
@@ -89,7 +89,7 @@ public class LoginController {
             userRepository.delete(user);
             model.addAttribute("mensagem", "Conta deletada com sucesso!");
         } else {
-            model.addAttribute("mensagem", "Senha incorreta, nome de usuario inexistente ou confirmação de deleção inválida");
+            model.addAttribute("mensagem", "Frase de confirmação errada! Digite *sim* para fazer a exclusao da conta");
 
         }
         return "logCad";
