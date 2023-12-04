@@ -89,7 +89,7 @@ public class LoginController {
             userRepository.delete(user);
             model.addAttribute("mensagem", "Conta deletada com sucesso!");
         } else {
-            model.addAttribute("mensagem", "Frase de confirmação errada! Digite *sim* para fazer a exclusao da conta");
+            model.addAttribute("mensagem", "A frase de confirmação pode estar errada! Ou senha incorreta ou nome de usuario inexistente. Verefique as credenciais");
 
         }
         return "logCad";
