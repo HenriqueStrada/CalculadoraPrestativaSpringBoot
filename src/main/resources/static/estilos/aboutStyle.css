@@ -4,16 +4,40 @@
     margin: 0;
     padding: 0;
 }
-
-#userForm {
-    max-width: 400px;
-    margin: 0 auto;
+.botoesOp{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+.selecao{
+    max-width: 150px;
+}
+.userForm {
+    margin-right: 20px;
+    max-width: 500px;
     background-color: #3F5D63;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.form2{
+    display: none;
+}
+.form2.exibir-form2 {
+    display: block;
+}
+.form3 {
+    display: none;
+}
+.userSenha{
+    margin-top: 15px;
+}
+.altNome {
+    margin-top: 10px;
+}
+.deletarUser {
+    margin-top: 10px;
+}
 .input-container {
     margin: 10px 0;
 }
@@ -35,7 +59,20 @@ input[type="password"] {
 #showPassword {
     margin-right: 5px;
 }
-
+.userButton {
+    margin-top: 10px;
+    background-color: #3F5D63;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.userButton:hover {
+    background-color: #30464B;
+}
 select {
     width: 100%;
     padding: 10px;
@@ -43,8 +80,10 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-button {
+.userVoltar {
+    display: none;
+}
+.buttons {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -54,6 +93,23 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.textAviso {
+    margin-top: 10px;
+}
+.deletNome{
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.deletNome:hover{
+    background-color: darkred;
+}
 .nomeUserContainer {
     position: relative;
     display: inline-block;
@@ -62,13 +118,12 @@ button {
 .nomeUser {
     padding-left: 25px;
 }
-
 .icon {
     position: absolute;
     left: 12.0rem;
     top: 4px;
 }
-button:hover {
+.buttons:hover {
     background-color: #0056b3;
 }
 body{
