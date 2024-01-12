@@ -24,7 +24,7 @@ public class LoginController {
     public String processForm(@RequestParam("username") String username,
                               @RequestParam("password") String password,
                               @RequestParam("action") String action,
-                              Model model) {
+                              Model  model) {
 
         // Verificar se o nome de usuário ou a senha estão vazios
         if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
